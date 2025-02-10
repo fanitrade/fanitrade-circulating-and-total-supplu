@@ -7,8 +7,8 @@ const rpcUrl = process.env.RPC_URL || 'https://api.mainnet-beta.solana.com'
 const connection = new solana.Connection(rpcUrl)
 const provider = new serum.Provider(connection)
 
-const fanitradeMint = new solana.PublicKey('6c4L5nTH2sBKkfeuP3WhGp6Vq1tE4Suh4ezRp5KSu8Z7')
-const treasuryTokens = new solana.PublicKey('AUs2r5XCGRAmZnthfTT22CHQ2BGSm1Ra843EM67rB3bF')
+const fanitradeMint = new solana.PublicKey('58trKv2EJwL5MUo34hLEKizQe9df3EUkaA1RUtBJpump')
+const treasuryTokens = new solana.PublicKey('HEN6JRU5CgWKZeU2PBoMTsxyfRisG1wBR1yFDQXBpw5X')
 
 app.get('/total', async function(req, res) {
     const mintInfo = await serum.getMintInfo(provider, fanitradeMint)
